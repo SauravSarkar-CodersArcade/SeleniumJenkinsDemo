@@ -1,5 +1,6 @@
 package demo;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class Test1 {
 		String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", projectPath+"/driver/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 
 	@Test
